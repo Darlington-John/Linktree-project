@@ -1,0 +1,772 @@
+<html lang="en">
+
+<head>
+    <title>Testing</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b3448f7f99.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <style>
+        /*.element {
+            width: 400px;
+            height: 300px;
+            position: relative;
+            margin: 50px auto;
+            perspective: 1000px;
+        
+        }
+        
+        .slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+        }
+        
+        .slideshow img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+
+        }
+        
+        .slideshow img.active {
+            transform: translateZ(0);
+
+        }
+        
+        .slideshow img.left {
+            transform: rotateY(30deg) translateZ(-100px);
+
+        }
+        
+        .slideshow img.right {
+            transform: rotateY(-30deg) translateZ(-100px);
+     
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+        }
+        
+        .element {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+        
+        .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .slideshow1,
+        .slideshow2 {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slideshow1 img,
+        .slideshow2 img {
+            width: 100%;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .slideshow1,
+        .slideshow2 {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slideshow1 img,
+        .slideshow2 img {
+            width: 100%;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .slideshow1 img.active,
+        .slideshow2 img.active {
+            opacity: 1;
+        }
+      
+        
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .slider {
+            display: flex;
+            width: 300%;
+            transition: transform 0.5s ease-out;
+        }
+        
+        .slider img {
+            flex: 1;
+            height: auto;
+            width: 100%;
+        }
+        
+        .slider:hover {
+            animation-play-state: paused;
+        }
+        
+        #imageDiv {
+            position: relative;
+        }
+        
+        .imageContainer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        
+        .imageContainer:first-child {
+            display: block;
+        } 
+        
+        .flip-container {
+            perspective: 1000px;
+        
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .flipper {
+            transition: 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        
+        .front,
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        
+        .back {
+            transform: rotateY(180deg);
+        }
+        */
+        
+        .flip-container.flipped .flipper {
+            transform: rotateY(180deg);
+        }
+        
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            background-color: #f3f3f1;
+        }
+        
+        .slider {
+            display: flex;
+            width: 400%;
+            height: 200px;
+            transition: transform 1s ease-in-out;
+        }
+        
+        .slider img {
+            flex: 1;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        
+        #flip-containern {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+        
+        #flip-containern .flippern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        
+        #flip-containern .flippern.flippedn {
+            transform: rotateY(180deg);
+        }
+        
+        #flip-containern .frontn,
+        #flip-containern .backn {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        
+        #flip-containern .backn {
+            transform: rotateY(180deg);
+        }
+        
+        .button {
+            position: absolute;
+            left: 10px;
+            /* Initial left position */
+            top: 50px;
+            /* Fixed top position */
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            /* New styles for stacking the buttons */
+            transform: translateX(-50%);
+            transition: transform 0.5s;
+        }
+        /* Position each button on top of the previous button */
+        
+        .button+.button {
+            top: calc(100% - 10px);
+        }
+        
+        #box1,
+        #box2,
+        #box3 {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            transition: transform 0.5s ease-in-out;
+            position: absolute;
+        }
+        
+        .blue {
+            background-color: blue;
+            top: 0;
+            left: 0;
+        }
+        
+        .red {
+            background-color: red;
+            top: 0;
+            right: 0;
+        }
+        
+        .green {
+            background-color: green;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .carousel1 {
+            position: relative;
+            background-color: #007bff;
+        }
+        
+        .carousel-inner1 {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+        
+        .carousel-item1 {
+            position: absolute;
+            top: 0;
+            left: 25%;
+            width: 800px;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+            background-color: aqua;
+        }
+        
+        #sl {
+            width: 800px;
+        }
+        
+        .carousel-item1 p {
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            opacity: 1;
+            font-size: 20px;
+            transition: opacity 0.6s ease-in-out;
+        }
+        
+        .carousel-item1.active {
+            opacity: 1;
+        }
+        
+        .carousel-button1 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border: none;
+            background: transparent;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .carousel-button-prev1 {
+            left: 10px;
+        }
+        
+        .carousel-button-next1 {
+            right: 10px;
+        }
+        
+        .accordion {
+            margin: 20px 0;
+            width: 50%;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        .accordion-item {
+            margin-bottom: 10px;
+        }
+        
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #eee;
+            cursor: pointer;
+            padding: 18px;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .accordion-content {
+            background-color: #fff;
+            padding: 18px;
+            display: none;
+        }
+        
+        .accordion-item.active .accordion-header {
+            background-color: #ccc;
+        }
+        
+        .accordion-item.active .accordion-content {
+            display: block;
+        }
+    </style>
+    <!--
+    <div id="imageDiv">
+        <div class="imageContainer">
+            <img src="C:\Users\hp\Downloads\item (1).png">
+            <img src="C:\Users\hp\Downloads\item.png">
+
+        </div>
+        <div class="imageContainer">
+            <img src="C:\Users\hp\Downloads\item.png">
+            <img src="C:\Users\hp\Downloads\item (2).png">
+
+        </div>
+        <div class="imageContainer">
+            <img src="C:\Users\hp\Downloads\item (2).png">
+            <img src="C:\Users\hp\Downloads\item (1).png">
+
+        </div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <img src="https://via.placeholder.com/400x200?text=Image%201">
+            <img src="https://via.placeholder.com/400x200?text=Image%202">
+            <img src="https://via.placeholder.com/400x200?text=Image%203">
+            <img src="https://via.placeholder.com/400x200?text=Image%204">
+            <img src="https://via.placeholder.com/400x200?text=Image%201">
+            <img src="https://via.placeholder.com/400x200?text=Image%202">
+            <img src="https://via.placeholder.com/400x200?text=Image%203">
+            <img src="https://via.placeholder.com/400x200?text=Image%204">
+        </div>
+    </div>
+    <div id="flip-containern">
+        <div class="flippern" id="flippern">
+            <div class="frontn">
+                <img src="C:\Users\hp\Downloads\svg+xml;base64,PHN2ZyB3aWR0aD0iMTYyIiBoZWlnaHQ9IjIwMiIgdmlld0JveD0iMCAwIDE2MiAyMDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjE2MiIgaGVpZ2h0PSIyMDIiIHJ4PSIzMiIgZmlsbD0iI0JCQkVBQy.svg "
+                    alt="Back Image ">
+            </div>
+            <div class="backn">
+                <img src="C:\Users\hp\Downloads\svg+xml;base64,PHN2ZyB3aWR0aD0iMzI0IiBoZWlnaHQ9IjIwMiIgdmlld0JveD0iMCAwIDMyNCAyMDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMyNCIgaGVpZ2h0PSIyMDIiIHJ4PSIzMiIgZmlsbD0iIzUwMjI3NC.svg"
+                    alt="Front Image">
+            </div>
+        </div>
+    </div>
+
+    <div id="buttons-container">
+        <button class="button">Button 1</button>
+        <button class="button">Button 2</button>
+        <button class="button">Button 3</button>
+        <button class="button">Button 4</button>
+        <button class="button">Button 5</button>
+    </div>
+
+    <div id="box1" class="blue"></div>
+    <div id="box2" class="red"></div>
+    <div id="box3" class="green"></div>
+
+    <div class="carousel1">
+        <div class="carousel-inner1">
+            <div class="carousel-item1 active">
+                <img src="https://linktr.ee/_gatsby/image/537602862cc1ba2a5ab85af4b58e6d1e/15a186931b23468dd8dc151e0365c9e6/Testimonial-Luke-Kidgell2.avif?eu=055cd5a8a1e45f23b64ff25e1e4c334f610d5fbf16afa775bb98e0dc81fb5fda542fd52db45d24e96395abb12c6379cb670d100e7ebdbf4d0c074ed135ff1bb46458674a96f30d2defe6ca5fabd74226b7a7dd993c0a7390af724f1c9b2861fad66c664fcc55cf5ff4829902379b0749a5bbb8f38b70fc42f78f0d1a565ba5c7297a99296daea2e5a97425855452e1258989fab130232b3564d7ca9ad2bdaa&a=w%3D1280%26h%3D647%26fm%3Davif%26q%3D75&cd=3841560b01267c523c364430e23855b2"
+                    id="Sl">
+                <p>iguyfyvt</p>
+            </div>
+            <div class="carousel-item1">
+                <img src="https://via.placeholder.com/800x400?text=Slide%202" alt="Slide 2">
+            </div>
+            <div class="carousel-item1">
+                <img src="https://via.placeholder.com/800x400?text=Slide%203" alt="Slide 3">
+            </div>
+        </div>
+        <button class="carousel-button1 carousel-button-prev1">&#9664;</button>
+        <button class="carousel-button1 carousel-button-next1">&#9654;</button>
+    </div>
+
+-->
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h3>Section 1</h3>
+                <span class="accordion-toggle"><i class="fa-solid fa-bars fa-beat-fade fa-2xl" id="bars" onclick="toggleIcon(this)"></i>
+        <i class="fa-solid fa-xmark fa-beat-fade fa-2xl" style="color: #000000; display:none" id="x" onclick="toggleIcon(this)"></i>
+      </span>
+            </div>
+            <div class="accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h3>Section 2</h3>
+                <span class="accordion-toggle"><i class="fa-solid fa-bars fa-beat-fade fa-2xl" id="bars" onclick="toggleIcon(this)"></i>
+        <i class="fa-solid fa-xmark fa-beat-fade fa-2xl" style="color: #000000; display:none" id="x" onclick="toggleIcon(this)"></i>
+      </span>
+            </div>
+            <div class="accordion-content">
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h3>Section 3</h3>
+                <span class="accordion-toggle"><i class="fa-solid fa-bars fa-beat-fade fa-2xl" id="bars" onclick="toggleIcon(this)"></i>
+        <i class="fa-solid fa-xmark fa-beat-fade fa-2xl" style="color: #000000; display:none" id="x" onclick="toggleIcon(this)"></i>
+      </span>
+            </div>
+            <div class="accordion-content">
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        const accordionItems = document.querySelectorAll('.accordion-item');
+
+        function toggleIcon(icon) {
+            const parent = icon.closest('.accordion-item');
+            const barsIcon = parent.querySelector('#bars');
+            const xIcon = parent.querySelector('#x');
+
+            parent.classList.toggle('active');
+            barsIcon.style.display = parent.classList.contains('active') ? 'none' : 'block';
+            xIcon.style.display = parent.classList.contains('active') ? 'block' : 'none';
+        }
+
+        accordionItems.forEach((item) => {
+            const icon = item.querySelector('.accordion-icon');
+            item.addEventListener('click', () => {
+                toggleIcon(icon);
+            });
+        });
+
+        // Get the carousel and its inner content
+        const carouselItems = document.querySelectorAll('.carousel-item1');
+        const prevButton = document.querySelector('.carousel-button-prev1');
+        const nextButton = document.querySelector('.carousel-button-next1');
+        let currentItem = 0;
+
+        function showItem(index) {
+            carouselItems.forEach(item => item.classList.remove('active'));
+            carouselItems[index].classList.add('active');
+        }
+
+        function nextItem() {
+            currentItem++;
+            if (currentItem > carouselItems.length - 1) {
+                currentItem = 0;
+            }
+            showItem(currentItem);
+        }
+
+        function prevItem() {
+            currentItem--;
+            if (currentItem < 0) {
+                currentItem = carouselItems.length - 1;
+            }
+            showItem(currentItem);
+        }
+
+        nextButton.addEventListener('click', nextItem);
+        prevButton.addEventListener('click', prevItem);
+
+        showItem(currentItem);
+
+
+        // Get references to the divs you want to swap
+        var box1 = document.getElementById("box1");
+        var box2 = document.getElementById("box2");
+        var box3 = document.getElementById("box3");
+
+        // Set up an array of class names to swap between
+        var classNames = ["blue", "red", "green"];
+
+        // Set up an array of positions to correspond with each class name
+        var positions = [{
+            top: 0,
+            left: 0
+        }, {
+            top: 0,
+            right: 0
+        }, {
+            bottom: 0,
+            left: 0
+        }, ];
+
+        // Set up a variable to track the current index in the array
+        var currentIndex = 0;
+
+        // Set up a function to swap the class names and positions of the divs
+        function swapClassNames() {
+            // Remove the current class name from each div
+            box1.classList.remove(classNames[currentIndex]);
+            box2.classList.remove(classNames[currentIndex]);
+            box3.classList.remove(classNames[currentIndex]);
+
+            // Increment the current index and wrap it around if it goes past the end of the array
+            currentIndex = (currentIndex + 1) % classNames.length;
+
+            // Add the new class name to each div
+            box1.classList.add(classNames[currentIndex]);
+
+            // Set the new position for each div based on the current class name
+            box1.style.top = positions[currentIndex].top;
+            box1.style.left = positions[currentIndex].left;
+
+            box2.classList.add(classNames[currentIndex]);
+
+            box2.style.top = positions[currentIndex].top;
+            box2.style.right = positions[currentIndex].right;
+
+            box3.classList.add(classNames[currentIndex]);
+
+            box3.style.bottom = positions[currentIndex].bottom;
+            box3.style.left = positions[currentIndex].left;
+        }
+
+        // Set up a loop to call the swapClassNames() function every 2 seconds
+        setInterval(swapClassNames, 2000);
+
+
+        var buttonPositions = [10, 50, 100, 150, 200]; // Array of button positions
+        var buttons = document.querySelectorAll(".button"); // Get all button elements
+
+        setInterval(function() {
+            // Shuffle the array of button positions
+            for (var i = buttonPositions.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = buttonPositions[i];
+                buttonPositions[i] = buttonPositions[j];
+                buttonPositions[j] = temp;
+            }
+
+            // Loop through each button and set its position to the next position in the shuffled array
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].style.left = buttonPositions[i] + "px";
+            }
+        }, 2000); // Run every 2 seconds
+
+        var flipper = document.querySelector('#flipper');
+        var isFlipped = false;
+
+        setInterval(function() {
+            flipper.classList.toggle('flipped');
+            isFlipped = !isFlipped;
+        }, 3000);
+
+        const slider = document.querySelector('.slider');
+        const images = document.querySelectorAll('.slider img');
+
+        let interval;
+
+        function startSlider() {
+            let counter = 0;
+            interval = setInterval(function() {
+                counter++;
+                slider.style.transform = 'translateX(' + (-25 * counter) + '%)';
+
+                if (counter === images.length - 1) {
+                    counter = -1;
+                }
+            }, 2500);
+        }
+
+        slider.addEventListener('mouseenter', function() {
+            clearInterval(interval);
+        });
+
+        slider.addEventListener('mouseleave', function() {
+            startSlider();
+        });
+
+        startSlider();
+
+        /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        const element = document.querySelector('.element');
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        const images = document.querySelectorAll('.slideshow img');
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        document.addEventListener('mousemove', e => {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            const x = e.clientX - element.offsetLeft;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            const y = e.clientY - element.offsetTop;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            const centerX = element.offsetWidth / 2;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            const centerY = element.offsetHeight / 2;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            const tiltX = (y - centerY) * 0.1; 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            const tiltY = (x - centerX) * -0.1;
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            images.forEach(img => {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                const imgX = img.offsetLeft + img.offsetWidth / 2;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                const imgY = img.offsetTop + img.offsetHeight / 2;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                const dx = x - imgX;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                const dy = y - imgY;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                const dist = Math.sqrt(dx * dx + dy * dy);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                const maxDist = Math.sqrt(centerX * centerX + centerY * centerY);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                const ratio = dist / maxDist;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                const scale = 1 - ratio;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                const signX = dx > 0 ? 1 : -1;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                const signY = dy > 0 ? 1 : -1;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                const rotateY = signX * (scale * 30); 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                const translateX = signX * (scale * 100);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                const translateY = signY * (scale * 50);
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                img.style.transform = `translateX(${translateX}%) translateY(${translateY}%) scale(${scale}) rotateY(${rotateY}deg)`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            });
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        });
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                var images = document.querySelectorAll('.slideshow img');
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                var currentImage = 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                var interval = setInterval(nextImage, 2000);
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                function nextImage() {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    images[currentImage].classList.remove('active');
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    currentImage = (currentImage + 1) % images.length;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    images[currentImage].classList.add('active');
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+        var slideshow1Index = 0;
+        var slideshow1Images = document.querySelectorAll('.slideshow1 img');
+
+        setInterval(function() {
+            slideshow1Images[slideshow1Index].classList.remove('active');
+            slideshow1Index = (slideshow1Index + 1) % slideshow1Images.length;
+            slideshow1Images[slideshow1Index].classList.add('active');
+        }, 2000);
+
+
+        var slideshow2Index = 0;
+        var slideshow2Images = document.querySelectorAll('.slideshow2 img');
+
+        setInterval(function() {
+            slideshow2Images[slideshow2Index].classList.remove('active');
+            slideshow2Index = (slideshow2Index + 1) % slideshow2Images.length;
+            slideshow2Images[slideshow2Index].classList.add('active');
+        }, 2000);
+
+        var slider = document.querySelector('.slider');
+        var images = slider.querySelectorAll('img');
+        var currentIndex = 0;
+        var interval;
+
+        function startSlider() {
+            interval = setInterval(function() {
+                currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+                slider.style.transform = 'translateX(' + (-currentIndex * 100 / images.length) + '%)';
+            }, 3000);
+        }
+
+        startSlider();
+
+
+        var index = 0;
+        var containers = document.getElementsByClassName("imageContainer");
+
+        setInterval(function() {
+            containers[index].style.display = "none";
+            index = (index + 1) % containers.length;
+            containers[index].style.display = "block";
+        }, 3000);
+        // add a click event listener to the container element
+        var flipInterval = 3000; // 3 seconds
+
+        // get the flip container element
+        var flipContainer = document.querySelector('.flip-container');
+
+        // function to trigger the flip animation
+        function flip() {
+            flipContainer.classList.toggle('flipped');
+        }
+
+        // set the flip interval
+        setInterval(flip, flipInterval);*/
+    </script>
+
+</body>
+
+</html>

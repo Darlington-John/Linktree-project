@@ -1,0 +1,160 @@
+.first {
+    font-family: 'Open Sans';
+    font-size: 14px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+div.intro {
+    background-image: url('https://wallpaperaccess.com/full/1285952.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tt {
+    font-family: "open sans", sans-serif;
+}
+
+a.left-link:link,
+a.left-link:visited {
+    background-color: white;
+    color: black;
+    border-radius: 18px;
+    font-size: 15px;
+    padding: 12px 23px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+}
+
+a.left-link:hover,
+a.left-link:active {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+a.left-linka:link,
+a.left-linka:visited {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 18px;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 12px 23px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+}
+
+a.left-linka:hover,
+a.left-linka:active {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.maps {
+    background-image: url('https://img.freepik.com/premium-photo/laptop-book-coffee-gray-background-top-view-office-desk-textured-gray-background_308079-2186.jpg?w=2000');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.maps1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: "open sans", sans-serif;
+}
+
+.left1 {
+    background-image: url('https://cdn.shopify.com/s/files/1/1020/2329/t/50/assets/desk.jpg?v=12358684918814240416');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.containers {
+    position: relative;
+    width: 405px;
+    width: 25%;
+    height: 305px;
+    float: left;
+}
+
+.images {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.overlays {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.containers:hover .overlays {
+    height: 30%;
+}
+
+.texts {
+    white-space: nowrap;
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    overflow: hidden;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.texts h5 {
+    padding-top: 15px;
+}
+
+#mysidenav a {
+    position: absolute;
+    left: 20px;
+    position: fixed;
+    transition: 0.3s;
+    padding: 15px;
+    width: auto;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+#mysidenav a:hover {
+    border-radius: 25px;
+    background-color: rgb(244, 251, 187);
+}
+
+#mysidenav a:hover .text {
+    visibility: visible;
+    transition: 0.5s ease;
+}
+
+#pin {
+    top: 200px;
+    background-color: rgba(248, 247, 247, 0.8);
+}
+
+@media (max-width: 375px) {
+    .images {
+        max-width: 100%;
+        width: 100%;
+    }
+}

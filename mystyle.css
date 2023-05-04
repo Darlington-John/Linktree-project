@@ -1,0 +1,562 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+body {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIZBzRGPrNt3T6hn-Ij7Xay8epntxuw_1C4w&usqp=CAU'), url('https://media.gettyimages.com/photos/singer-sia-attends-an-evening-with-women-benefiting-the-los-angeles-picture-id473696198?k=20&m=473696198&s=612x612&w=0&h=Izt3vVQDWvjaq4zLIdM6bYXzhOZFWsqWy8HxfnWoeZk='), url('https://media.gettyimages.com/photos/sia-attends-the-creators-party-presented-by-spotify-at-cicada-on-13-picture-id510112828?k=20&m=510112828&s=612x612&w=0&h=QY3Mh4hbkGojbTGH24-VueIgb1CPxB5NIiHizcc_StI='), url('https://media.gettyimages.com/photos/singersongwriter-sia-attends-the-annie-world-premiere-at-ziegfeld-on-picture-id460134814?k=20&m=460134814&s=612x612&w=0&h=YiJGnM-K5JEYm39NxqjFrBTvpGYVLjFu1nrRc9yoCPk='), url('https://media.gettyimages.com/photos/singersongwriter-sia-attends-the-creators-party-presented-by-spotify-picture-id510108218?k=20&m=510108218&s=612x612&w=0&h=cxGCqbB7gy6_CiCg4q7MSPu0Auc3QjmdowWabV8EheU='), url('https://media.gettyimages.com/photos/recording-artist-sia-performs-onstage-at-the-2016-iheartradio-music-picture-id610055932?k=20&m=610055932&s=612x612&w=0&h=CuJVEShA00KCZu2_TmjVkAjod7Vc_xraz-Rrp12ljXA='), url('https://media.gettyimages.com/photos/singersongwriter-sia-performs-at-the-1027-kiis-fms-wango-tango-at-picture-id472855214?k=20&m=472855214&s=612x612&w=0&h=Z8qGmyZUfJBgKmlaCucOQT0-ogratEgXwzWuvxuhZCo='), url('https://media.gettyimages.com/photos/in-this-image-released-on-october-14-sia-performs-onstage-at-the-2020-picture-id1280244715?k=20&m=1280244715&s=612x612&w=0&h=nq3V-RItD7F42pCm8C6Gj6oL_sNtqm5bQ_h7I3ASSig='), url('https://media.gettyimages.com/photos/sia-performs-on-day-1-of-the-boston-calling-festival-on-government-picture-id534788258?k=20&m=534788258&s=612x612&w=0&h=X5RbOX6UdZ1hlmXC2tTnBDn9kdkzBZgLb-MyJBFQnyA='), url('https://media.gettyimages.com/photos/dancer-maddie-ziegler-and-singersongwriter-sia-attend-the-57th-annual-picture-id463013618?k=20&m=463013618&s=612x612&w=0&h=yozLiu5pco4l7lRGntGhcXOXBr7AcnL5YjqIt9JJ-FI='), url('https://media.gettyimages.com/photos/sia-performs-during-1027-kiis-fms-wango-tango-at-stubhub-center-on-9-picture-id472825210?k=20&m=472825210&s=612x612&w=0&h=2HKKjJk635KqGuULrwKuqaoZuB3kO9ykHJO6R5Ax0HQ='), url('https://media.gettyimages.com/photos/producer-erik-anders-lang-and-wife-recording-artist-sia-attend-the-picture-id464270192?k=20&m=464270192&s=612x612&w=0&h=6RTK9GognCq7VgT9_h542DZHDQQFKFJplttCRi_8DHQ='), url('https://media.gettyimages.com/photos/sia-is-seen-at-lax-on-march-22-2017-in-los-angeles-california-picture-id656828160?k=20&m=656828160&s=612x612&w=0&h=Gq0HkaNOBuTWjrXN7e43gCcjMyjsCYxHwPe_K67rIdY='), url('https://media.gettyimages.com/photos/singer-sia-performs-onstage-at-the-humane-society-of-the-united-60th-picture-id481403959?k=20&m=481403959&s=612x612&w=0&h=JRWoBM6ixrhpUZLUpxdyjr806rty6Q96HSP56AyKFOQ='), url('https://media.gettyimages.com/photos/sia-attends-the-humane-society-of-the-united-states-60th-anniversary-picture-id481446503?k=20&m=481446503&s=612x612&w=0&h=6YCtlNfnfI44DYlQEzWOSvL-hWMqigzg10aR2OGr2yc=');
+    border-radius: 30%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 270px;
+    background-position: 98% 4%, 99% 15%, 96% 22%, 99% 78%, 96% 30%, 99% 37%, 96% 44%, 99% 50%, 96% 57%, 99% 65%, 96% 72%, 99% 86%, 96% 93%, 99% 98%, 95% 10%;
+    z-index: -1;
+    color: black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0px 0px 2px green;
+    margin: 30px;
+}
+
+a.left-link:link,
+a.left-link:visited {
+    background-color: #04AA6D;
+    color: white;
+    border-radius: 5%;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 50px;
+    transition-duration: 0.4s;
+}
+
+a.left-link:hover,
+a.left-link:active {
+    background-color: #049b63;
+    text-align: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    max-width: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.topmenu ul {
+    list-style-type: none;
+    flex-wrap: nowrap;
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(59, 58, 58);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.topmenu li a.active {
+    background-color: #04AA6D;
+}
+
+.topmenu li {
+    float: left;
+    width: 200px;
+    height: auto;
+}
+
+.topmenu li a {
+    display: block;
+    color: #f1f1f1;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topmenu li a:hover:not(.active) {
+    background-color: black;
+}
+
+.vertical-menu ul {
+    list-style-type: none;
+    margin-top: 57px;
+    padding: 0;
+    width: 14%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+    z-index: 1;
+    box-shadow: 0 0 3px #04AA6D;
+}
+
+.vertical-menu li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: left;
+    border: 0.3px solid gray;
+    border-collapse: collapse;
+}
+
+.vertical-menu li a.active {
+    background-color: #04AA6D;
+    color: white;
+    width: 100%;
+}
+
+.vertical-menu a:hover:not(.active) {
+    background-color: rgb(215, 214, 214);
+    color: black;
+}
+
+.contents {
+    margin-left: 20px solid #04AA6D;
+}
+
+a:link {
+    color: #04AA6D;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #04AA6D;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(102, 20, 225);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:active {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.list-heading {
+    text-align: center;
+}
+
+.intro {
+    width: auto;
+    padding: 100px;
+    margin: 25px 250px 0 150px;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.img1 {
+    margin: 5px 30px 10px 10px;
+    float: left;
+    width: 40%;
+    height: 40%;
+}
+
+.container {
+    position: relative;
+}
+
+.left-float-clearfix {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+}
+
+.main>* {
+    margin: 10px 500px 10px 270px;
+    width: auto;
+    text-indent: 15px;
+}
+
+.main::first-letter {
+    font-size: 45px;
+}
+
+.img2 {
+    margin: 10px;
+    float: right;
+    width: 40%;
+    height: 40%;
+    max-width: 40%;
+    height: auto;
+}
+
+.imgs {
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.clearfix2::after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: 100px;
+}
+
+.img3 {
+    margin: 10px;
+    float: left;
+    width: 38%;
+    height: 38%;
+    max-width: 38%;
+    height: auto;
+}
+
+.clearfix3::after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: 100px;
+}
+
+.img4 {
+    margin: 10px;
+    float: right;
+    width: 30%;
+    height: 30%;
+    max-width: 30%;
+    height: auto;
+}
+
+.clearfix4::after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: 70px;
+}
+
+.img5 {
+    margin: 10px;
+    float: left;
+    width: 50%;
+    height: 50%;
+    max-width: 50%;
+    height: auto;
+}
+
+.clearfix5::after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: 100px;
+}
+
+.img7 {
+    margin: 10px;
+    float: right;
+    width: 50%;
+    height: 55%;
+    max-width: 55%;
+    height: auto;
+}
+
+.clearfix6::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.christmas {
+    width: 95%;
+    height: 95%;
+    max-width: 95%;
+    height: auto;
+}
+
+.img6 {
+    margin: 10px 40px 10px 30px;
+    float: left;
+    width: 40%;
+    height: 45%;
+    max-width: 40%;
+    height: auto;
+}
+
+.clearfix8::after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: 100px;
+}
+
+table {
+    font-family: 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+    border: 2px solid darkcyan;
+    margin: 20px;
+    overflow: auto;
+}
+
+td {
+    border: 2px solid darkcyan;
+    padding: 8px;
+    width: 150px;
+}
+
+th {
+    background-color: darkcyan;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: peachpuff;
+}
+
+.table2 {
+    width: 100%;
+}
+
+img {
+    border: 1px solid #04AA6D;
+    border-radius: 8px;
+    margin: auto;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 186, 62, 0.5);
+}
+
+.related-searches img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 186, 62, 0.5);
+    transform: scale(1.1, 1.1);
+    z-index: 1;
+}
+
+.related-searches {
+    float: left;
+    background-color: #e9f7f2;
+    width: 50%;
+    padding-top: 20px;
+    margin-bottom: 70px;
+    animation-name: search;
+    background-image: linear-gradient(to bottom right, #fafafa, #fffeed, #dffaff);
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.related-searches img {
+    float: left;
+}
+
+@keyframes search {
+    0% {
+        background-image: linear-gradient(to bottom right, #fafafa, #fffeed, #dffaff);
+    }
+    25% {
+        background-image: linear-gradient(to bottom right, #f5ecc0fe, #cefbf2, #faf8fc);
+    }
+    50% {
+        background-image: linear-gradient(to bottom right, #e5f5adfe, #bdf2f9, #f4f0fa);
+    }
+    75% {
+        background-image: linear-gradient(to bottom right, #f7f3ddfe, #d1faf2, #fcfaff);
+    }
+    100% {
+        background-image: linear-gradient(to bottom right, #f3e28dfe, #9dfae7, #ecdfff);
+    }
+}
+
+.rihanna,
+.erik,
+.david {
+    margin: 0 20px 50px 20px;
+    transition-duration: 1s;
+}
+
+.welcome-btn {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    font-weight: 200;
+    background-color: #04AA6D;
+    color: white;
+    border: 1px solid #04AA6D;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.welcome-btn:hover {
+    background-color: #038b59;
+}
+
+@media (max-width:420px) {
+    .vertical-menu {
+        display: none;
+    }
+    .topmenu ul {
+        display: none;
+    }
+    body {
+        margin: 15px;
+        padding: 0;
+        font-size: 16px;
+        font-weight: 80;
+        background-image: none;
+    }
+    .intro {
+        margin: 10px 10px 20px 10px;
+        padding: 20px;
+    }
+    [class^=clear] img {
+        float: none;
+    }
+    [class*="clearfix"] {
+        margin: 10px 25px 0px 25px;
+    }
+    .imgs {
+        margin: auto 17px auto 10px;
+        width: 97%;
+    }
+    .img1 {
+        width: 60%;
+        height: 60%;
+        max-width: 60%;
+        height: auto;
+    }
+    .img2 {
+        width: 80%;
+        height: 80%;
+        max-width: 80%;
+        height: auto;
+    }
+    .img3 {
+        width: 80%;
+        height: 80%;
+        max-width: 80%;
+        height: auto;
+    }
+    .img4 {
+        width: 60%;
+        height: 60%;
+        max-width: 60%;
+        height: auto;
+    }
+    .img5 {
+        width: 70%;
+        height: 70%;
+        max-width: 70%;
+        height: auto;
+    }
+    .img6 {
+        width: 65%;
+        height: 65%;
+        max-width: 65%;
+        height: auto;
+    }
+    .img7 {
+        width: 70%;
+        height: 70%;
+        max-width: 70%;
+        height: auto;
+    }
+    .main>* {
+        margin: 5px;
+        padding: 15px;
+    }
+    .left-float-clearfix {
+        position: relative;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin: auto;
+    }
+    h1 {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    h2 {
+        font-size: 20px;
+        margin: 10px 25px 10px 25px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 16px;
+        margin: 10px 25px 10px 25px;
+    }
+    a.left-link:link,
+    a.left-link:visited {
+        background-color: #04AA6D;
+        color: white;
+        border-radius: 5%;
+        padding: 7px 17px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 50px;
+    }
+    a.left-link:hover,
+    a.left-link:active {
+        background-color: #049b63;
+        text-align: center;
+    }
+    .related-searches {
+        background-color: #e9f7f2;
+        width: 80%;
+        padding-top: 20px;
+        margin-bottom: 70px;
+        animation-name: search;
+        background-image: linear-gradient(to bottom right, #fafafa, #fffeed, #dffaff);
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    div.rs1 {
+        width: 100%;
+        background-color: transparent;
+        margin-bottom: 20px;
+    }
+    div.rs11 {
+        text-align: center;
+        top: 0;
+    }
+}
